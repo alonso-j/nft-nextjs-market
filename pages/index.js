@@ -14,7 +14,11 @@ function Home() {
 
   const drop = useNFTDrop(NFT_DROP_ADDESS);
   const { address, isConnected } = useAccount();
-  const { data: nfts, isLoading: isLoadingNFTs } = useNFTs(drop);
+  const {
+    data: nfts,
+    isLoading: isLoadingNFTs,
+    error: dropError,
+  } = useNFTs(drop);
   const [tokens, setTokens] = useState([]);
 
   useEffect(() => {
@@ -24,13 +28,15 @@ function Home() {
   }, [isLoadingNFTs, nfts, isConnected, address]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/data')
+    fetch('/api/data')
       .then((response) => response.json())
       .then((data) => {
         setData(data);
         setIsLoadingData(false);
       });
   }, []);
+
+  console.log(dropError);
 
   return (
     <div>
