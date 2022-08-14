@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useAccount } from 'wagmi';
 import { useNFTDrop, useNFTs } from '@thirdweb-dev/react';
 
 import { NFT_DROP_ADDESS } from '../utils/constants';
@@ -11,21 +10,23 @@ import Card from '../components/UI/Card';
 function Home() {
   const [data, setData] = useState([]);
   const [isLoadingData, setIsLoadingData] = useState(true);
-
+  const [tokens, setTokens] = useState([]);
   const drop = useNFTDrop(NFT_DROP_ADDESS);
-  const { address, isConnected } = useAccount();
   const {
     data: nfts,
     isLoading: isLoadingNFTs,
     error: dropError,
   } = useNFTs(drop);
-  const [tokens, setTokens] = useState([]);
 
   useEffect(() => {
-    if (!isLoadingNFTs && isConnected) {
+    if (dropError != null) {
+      console.log(dropError);
+    }
+
+    if (!isLoadingNFTs) {
       setTokens(nfts);
     }
-  }, [isLoadingNFTs, nfts, isConnected, address]);
+  }, [isLoadingNFTs, nfts, dropError]);
 
   useEffect(() => {
     fetch('/api/data')
@@ -35,8 +36,6 @@ function Home() {
         setIsLoadingData(false);
       });
   }, []);
-
-  console.log(dropError);
 
   return (
     <div>
@@ -61,7 +60,10 @@ function Home() {
         </h1>
 
         <p className="text-center my-16 leading-normal text-xl">
-          NFTs in this drop <code className="code">{tokens.length}</code>
+          NFTs in this drop{' '}
+          <code className="code">
+            {tokens === undefined ? 0 : tokens.length}
+          </code>
         </p>
 
         <div className="flex flex-col flex-wrap justify-center items-center w-full md:flex-row md:max-w-3xl">
