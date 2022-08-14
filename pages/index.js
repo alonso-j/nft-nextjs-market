@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
+import { useNFTDrop, useNFTs } from '@thirdweb-dev/react';
 
+import { NFT_DROP_ADDESS } from '../utils/constants';
 import Head from 'next/head';
 import Footer from '../components/Layout/Footer';
 import HeaderContainer from '../components/Layout/HeaderContainer';
@@ -8,9 +10,26 @@ import Card from '../components/UI/Card';
 function Home() {
   const [data, setData] = useState([]);
   const [isLoadingData, setIsLoadingData] = useState(true);
+  const [tokens, setTokens] = useState([]);
+  const drop = useNFTDrop(NFT_DROP_ADDESS);
+  const {
+    data: nfts,
+    isLoading: isLoadingNFTs,
+    error: dropError,
+  } = useNFTs(drop);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/data')
+    if (dropError != null) {
+      console.log(dropError);
+    }
+
+    if (!isLoadingNFTs) {
+      setTokens(nfts);
+    }
+  }, [isLoadingNFTs, nfts, dropError]);
+
+  useEffect(() => {
+    fetch('/api/data')
       .then((response) => response.json())
       .then((data) => {
         setData(data);
@@ -41,7 +60,10 @@ function Home() {
         </h1>
 
         <p className="text-center my-16 leading-normal text-xl">
-          Get started by editing <code className="code">pages/index.js</code>
+          NFTs in this drop{' '}
+          <code className="code">
+            {tokens === undefined ? 0 : tokens.length}
+          </code>
         </p>
 
         <div className="flex flex-col flex-wrap justify-center items-center w-full md:flex-row md:max-w-3xl">
