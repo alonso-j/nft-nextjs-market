@@ -1,29 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani&family=Prompt&family=Roboto:wght@900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
+  * {
+    @apply box-border;
+  }
+  html,
+  body {
+    @apply relative p-0 m-0 bg-yellow-50/70;
+  }
   .code {
     @apply bg-slate-200/30 rounded-md p-3 text-base;
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   }
-}
 
-html,
-body {
-  position: relative;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+  .main-gradient {
+    @apply bg-gradient-to-tr from-[#c9b3ff] to-[#d5ffcc];
+  }
 }
 
 @media (prefers-color-scheme: dark) {

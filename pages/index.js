@@ -50,36 +50,45 @@ function Home() {
       </header>
 
       <main className="min-h-screen flex flex-1 flex-col items-center mx-12 py-8">
-        <h1 className="m-0 leading-normal text-6xl text-center">
-          Welcome to{' '}
-          <a
-            href="https://nextjs.org"
-            className="text-center text-blue-400 no-underline hover:underline focus:underline active:underline">
-            Next.js!
-          </a>
-        </h1>
+        <section className="h-screen flex flex-col items-center justify-center main-gradient bg-clip-text text-transparent select-none">
+          <p className="font-roboto text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] 2xl:text-[22rem] p-0 m-0">
+            MARKET
+          </p>
+          <p className="font-prompt lg:text-xl xl:text-3xl">NFT</p>
+        </section>
 
-        <p className="text-center my-16 leading-normal text-xl">
-          NFTs in this drop{' '}
-          <code className="code">
-            {tokens === undefined ? 0 : tokens.length}
-          </code>
-        </p>
+        <section>
+          <h1 className="m-0 leading-normal text-6xl text-center">
+            Welcome to{' '}
+            <a
+              href="https://nextjs.org"
+              className="text-center text-blue-400 no-underline hover:underline focus:underline active:underline">
+              Next.js!
+            </a>
+          </h1>
 
-        <div className="flex flex-col flex-wrap justify-center items-center w-full md:flex-row md:max-w-3xl">
-          {isLoadingData ? (
-            <h4>Loading...</h4>
-          ) : (
-            data.map((item) => (
-              <Card
-                key={item.id}
-                title={item.title}
-                description={item.description}
-                url={item.url}
-              />
-            ))
-          )}
-        </div>
+          <p className="text-center my-16 leading-normal text-xl">
+            NFTs in this drop{' '}
+            <code className="code">
+              {tokens === undefined ? 0 : tokens.length}
+            </code>
+          </p>
+
+          <div className="flex flex-col flex-wrap justify-center items-center w-full md:flex-row md:max-w-3xl">
+            {isLoadingData ? (
+              <h4>Loading...</h4>
+            ) : (
+              data.map((item) => (
+                <Card
+                  key={item.id}
+                  title={item.title}
+                  description={item.description}
+                  url={item.url}
+                />
+              ))
+            )}
+          </div>
+        </section>
       </main>
 
       <footer>
