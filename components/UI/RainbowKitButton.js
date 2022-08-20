@@ -27,7 +27,7 @@ const RainbowKitButton = ({ showBalance }) => {
                   <button
                     onClick={openConnectModal}
                     type="button"
-                    className="py-1 px-3 space-x-3 rounded-xl shadow-sm text-white bg-zinc-800 hover:bg-opacity-80 hover:scale-105 hover:shadow-md transition-all duration-700">
+                    className="py-1 px-3 space-x-3 rounded-xl shadow-sm text-white bg-zinc-800 hover:bg-opacity-80 hover:scale-105 hover:shadow-md transition-all duration-700 whitespace-nowrap">
                     Connect Wallet
                   </button>
                 );
