@@ -75,7 +75,7 @@ function Home() {
           </div>
         </section>
 
-        <section>
+        <section className="h-screen flex flex-col items-center justify-center">
           <h1 className="m-0 leading-normal text-6xl text-center">
             Welcome to{' '}
             <a
