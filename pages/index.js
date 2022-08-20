@@ -49,7 +49,7 @@ function Home() {
         <HeaderContainer />
       </header>
 
-      <main className="min-h-screen flex flex-1 flex-col items-center mx-12 py-8">
+      <main className="min-h-screen flex flex-1 flex-col mx-12 py-8">
         <section className="h-screen flex flex-col items-center justify-center main-gradient bg-clip-text text-transparent select-none">
           <p className="font-roboto text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] 2xl:text-[22rem] p-0 m-0">
             MARKET

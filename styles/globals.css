@@ -9,7 +9,7 @@
   }
   html,
   body {
-    @apply relative p-0 m-0 bg-yellow-50/70;
+    @apply relative p-0 m-0 bg-yellow-50/70 text-zinc-700;
   }
   .code {
     @apply bg-slate-200/30 rounded-md p-3 text-base;
