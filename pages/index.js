@@ -6,6 +6,7 @@ import Head from 'next/head';
 import Footer from '../components/Layout/Footer';
 import HeaderContainer from '../components/Layout/HeaderContainer';
 import Card from '../components/UI/Card';
+import Carousel from '../components/Carousel/Carousel';
 
 function Home() {
   const [data, setData] = useState([]);
@@ -51,10 +52,27 @@ function Home() {
 
       <main className="min-h-screen flex flex-1 flex-col mx-12 py-8">
         <section className="h-screen flex flex-col items-center justify-center main-gradient bg-clip-text text-transparent select-none">
-          <p className="font-roboto text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] 2xl:text-[22rem] p-0 m-0">
+          <p className="font-roboto font-black text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] 2xl:text-[22rem] p-0 m-0">
             MARKET
           </p>
           <p className="font-prompt lg:text-xl xl:text-3xl">NFT</p>
+        </section>
+
+        <section>
+          <div className="flex space-x-6 text-left">
+            <div className="py-2">
+              <p className="font-roboto font-normal text-6xl mb-6">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                odit voluptatibus quaerat? Eum, quia veniam minima fugiat ipsam
+                dolores ipsum!
+              </span>
+            </div>
+
+            <Carousel />
+          </div>
         </section>
 
         <section>
