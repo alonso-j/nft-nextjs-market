@@ -2,7 +2,7 @@ import RainbowKitButton from '../UI/RainbowKitButton';
 
 function HeaderContainer() {
   return (
-    <div className="flex flex-1 justify-between items-center h-14 py-4 px-12 border-b-2">
+    <div className="fixed top-0 left-0 w-screen flex flex-1 justify-between items-center h-14 py-4 px-12 shadow-md bg-slate-500/20">
       <div className="w-full flex justify-start">Logo</div>
       <div className="w-full flex justify-end">
         <RainbowKitButton showBalance={false} />
