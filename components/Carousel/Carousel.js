@@ -10,25 +10,39 @@ const { title, description, price, currency } = {
 
 function Carousel() {
   return (
-    <div className="flex flex-col justify-center items-center w-full h-[36rem] px-2 space-x-8 bg-slate-200/75 rounded-xl shadow-sm md:flex-row">
-      <Carouseltem
-        title={title}
-        description={description}
-        price={price}
-        currency={currency}
-      />
-      <Carouseltem
-        title={title}
-        description={description}
-        price={price}
-        currency={currency}
-      />
-      <Carouseltem
-        title={title}
-        description={description}
-        price={price}
-        currency={currency}
-      />
+    <div className="w-full h-[36rem] p-8 bg-slate-200/75 rounded-xl shadow-sm overflow-hidden">
+      <div className="flex flex-col items-center justify-center h-full w-full space-y-4 overflow-auto md:flex-row md:space-y-0 md:space-x-4">
+        <Carouseltem
+          title={title}
+          description={description}
+          price={price}
+          currency={currency}
+        />
+        <Carouseltem
+          title={title}
+          description={description}
+          price={price}
+          currency={currency}
+        />
+        <Carouseltem
+          title={title}
+          description={description}
+          price={price}
+          currency={currency}
+        />
+        <Carouseltem
+          title={title}
+          description={description}
+          price={price}
+          currency={currency}
+        />
+        <Carouseltem
+          title={title}
+          description={description}
+          price={price}
+          currency={currency}
+        />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 function Carouseltem({ title, description, price, currency }) {
   return (
-    <div className="relative w-80 h-5/6 bg-[#FFAFCC] rounded-lg shadow-md overflow-hidden group">
+    <div className="relative min-w-[18rem] h-full min-h-full bg-[#FFAFCC] rounded-lg shadow-md group">
       {/* Bottom Info */}
       <div className="absolute bottom-0 left-0 right-0 flex flex-col h-1/3 p-4 space-y-1 main-gradient-transparent-lg opacity-0 group-hover:opacity-100 duration-500">
         <div className="">

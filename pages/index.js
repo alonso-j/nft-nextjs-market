@@ -58,21 +58,19 @@ function Home() {
           <p className="font-prompt lg:text-xl xl:text-3xl">NFT</p>
         </section>
 
-        <section>
-          <div className="flex space-x-6 text-left">
-            <div className="py-2">
-              <p className="font-roboto font-normal text-6xl mb-6">
-                Lorem ipsum dolor sit amet consectetur.
-              </p>
-              <span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                odit voluptatibus quaerat? Eum, quia veniam minima fugiat ipsam
-                dolores ipsum!
-              </span>
-            </div>
-
-            <Carousel />
+        <section className="flex flex-col space-x-6 text-center md:flex-row md:text-left">
+          <div className="w-full py-2 md:w-2/4 md:min-w-[40%]">
+            <p className="font-roboto font-normal text-6xl mb-6">
+              Lorem ipsum dolor sit amet consectetur.
+            </p>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              odit voluptatibus quaerat? Eum, quia veniam minima fugiat ipsam
+              dolores ipsum!
+            </span>
           </div>
+
+          <Carousel />
         </section>
 
         <section className="h-screen flex flex-col items-center justify-center">
