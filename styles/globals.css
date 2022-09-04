@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani&family=Prompt&family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani&family=Prompt&family=Roboto:wght@400;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,6 +19,18 @@
 
   .main-gradient {
     @apply bg-gradient-to-tr from-[#c9b3ff] to-[#d5ffcc];
+  }
+
+  .main-gradient-transparent-lg {
+    @apply bg-gradient-to-tr from-[#c9b3ff]/25 to-[#d5ffcc]/25;
+  }
+
+  .main-gradient-transparent-md {
+    @apply bg-gradient-to-tr from-[#c9b3ff]/50 to-[#d5ffcc]/50;
+  }
+
+  .main-gradient-transparent-sm {
+    @apply bg-gradient-to-tr from-[#c9b3ff]/75 to-[#d5ffcc]/75;
   }
 }
 
