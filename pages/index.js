@@ -50,7 +50,7 @@ function Home() {
         <HeaderContainer />
       </header>
 
-      <main className="min-h-screen flex flex-1 flex-col mx-12 py-8">
+      <main className="min-h-screen flex flex-1 flex-col mx-12">
         <section className="h-screen flex flex-col items-center justify-center main-gradient bg-clip-text text-transparent select-none">
           <p className="font-roboto font-black text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] 2xl:text-[22rem] p-0 m-0">
             MARKET
@@ -58,12 +58,12 @@ function Home() {
           <p className="font-prompt lg:text-xl xl:text-3xl">NFT</p>
         </section>
 
-        <section className="flex flex-col space-x-6 text-center md:flex-row md:text-left">
-          <div className="w-full py-2 md:w-2/4 md:min-w-[40%]">
-            <p className="font-roboto font-normal text-6xl mb-6">
+        <section className="flex flex-col h-auto text-center md:flex-row md:text-left md:space-x-6">
+          <div className="w-full mb-4 md:w-2/4 md:min-w-[40%] md:py-2">
+            <p className="mb-2 font-roboto font-medium text-3xl md:mb-6 md:font-normal md:text-6xl">
               Lorem ipsum dolor sit amet consectetur.
             </p>
-            <span>
+            <span className="text-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
               odit voluptatibus quaerat? Eum, quia veniam minima fugiat ipsam
               dolores ipsum!
@@ -73,7 +73,7 @@ function Home() {
           <Carousel />
         </section>
 
-        <section className="h-screen flex flex-col items-center justify-center">
+        <section className="h-auto flex flex-col items-center justify-center space-y-12 my-12 md:h-screen md:my-0">
           <h1 className="m-0 leading-normal text-6xl text-center">
             Welcome to{' '}
             <a
@@ -83,7 +83,7 @@ function Home() {
             </a>
           </h1>
 
-          <p className="text-center my-16 leading-normal text-xl">
+          <p className="text-center leading-normal text-xl">
             NFTs in this drop{' '}
             <code className="code">
               {tokens === undefined ? 0 : tokens.length}
